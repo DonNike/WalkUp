@@ -1,0 +1,128 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #fff1e9;
+  }
+
+  h1{
+    color: #ff914d;
+  }
+  
+  h3{
+    text-decoration: underline;
+  }
+  
+  p{
+    font-weight: 300;
+  }
+ 
+  .container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 0 #ff914d;
+  }
+
+  .title {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+
+  .options {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .option {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    color: #ff914d;
+    border: 1px solid #ff914d;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 0 #ff914d;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+  }
+
+  .option:hover,
+  .option:focus{
+    background-color: #fff1e9;
+    transform: scale(1.05);
+  }
+
+  .option-text {
+    font-size: 16px;
+  }
+  
+  .modal{
+    display: none;
+    position: fixed;
+    top: 15%;
+    left: 50%;
+    backdrop-filter: blur(3px);
+    border: 2px solid #fff1e9;
+    color: #ff914d;
+    box-shadow: 0 0 10px 0 #ff914d;
+    width: 70%;
+    padding: 10px 20px;
+    transform: translate(-50%, -50%);
+    z-index: 99999;
+  }
+  
+  
+  
+  .modal.active{
+    display: block;
+  }
+  
+  .modal span{
+    float: right;
+    font-size: 24px;
+    font-weight: 500;
+    cursor: pointer;
+  }
+
+ .button {
+    background-color: transparent;
+    border: 3px solid #ff914d;
+    color: #ff914d;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.icon{
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.icons {
+  background-color: rgba(255, 145, 77, 0.7);
+  color: #fff1e9;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  text-align: center;
+  margin-top: 25px;
+  transform: translateX(10px);
+}
+
+i{
+  margin-top: 15px;
+  z-index: 99999;
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Which Kind Of Sleeper?</title>
+    <link rel="stylesheet" href="style2.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="img"><br><br><br><br>
+        <img src="Images/sleep.svg" alt="">
+        <div class="header">
+          ARE YOU A HEAVY SLEEPER?
+        </div>
+      </div>
+    </div>
+
+    <section>
+      <div class="tile">
+        <input type="radio" name="sleep" id="yes" value="yes">
+        <label for="yes">
+          <i class="fa-regular fa-thumbs-up"></i>
+          <h6>YES</h6>
+        </label>
+      </div>
+
+      <div class="tile">
+        <input type="radio" name="sleep" id="no" value="no">
+        <label for="no">
+          <i class="fa-regular fa-thumbs-down"></i>
+          <h6>NO</h6>
+        </label>
+      </div>  
+    </section>
+
+    <button id="myButton">Continue</button>
+
+    <script>
+      document.getElementById('myButton').addEventListener('click', function() {
+        const yesChecked = document.getElementById('yes').checked;
+        if (yesChecked) {
+          window.location.href = 'index3.html';
+        } else {
+          alert('You must select "YES" to continue.');
+        }
+      });
+    </script>
+  </body>
+</html>

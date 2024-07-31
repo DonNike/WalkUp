@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color:  #FFF1E9;
+}
+
+a{
+  text-decoration: none;
+}
+
+.container{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: translateX(25%);
+  top: 25%;
+  left: 22%;
+  justify-content: center;
+  position: absolute;
+  gap: 20px;
+}
+
+.img img{
+  width: 30%;
+  top: 30%;
+  transform: translateX(-50px);
+}
+
+.img .header{
+  font-family: "Michroma", sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  text-align: center;
+  transform: translateX(-40px);
+  color: #FF914D;
+}
+
+#myButton {
+  background-color: #FF914D;
+  color: #fff; /* Text color for better contrast */
+  padding: 20px 30px; /* Increased padding */
+  font-size: 22px;
+  font-family: "Michroma", sans-serif;
+  border: none; /* Remove default border */
+  border-radius: 10%; /* Add rounded corners (optional) */
+  text-align: center; /* Center text within the button */
+  display: block; /* Make the button occupy full width on a new line */
+  position: absolute;
+  bottom: 20%;
+  left: 50%; /* Position horizontally at the center */
+  transform: translateX(-50%);
+}
+
+
+section{
+  width: 100vmin;
+  height: 100vh;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.tile{
+  height: 200px;
+  width: 170px;
+  position: relative;
+}
+
+input[type="radio"]{
+  -webkit-appearance: none;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 10%;
+  cursor: pointer;
+  border: 3px solid transparent;
+  outline: none;
+  box-shadow: 15px 15px 25px rgba(2, 28, 53, 0.05);
+}
+
+input[type="radio"]:after{
+  position: absolute;
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+  content: "\f111";
+  font-size: 22px;
+  top: 10px;
+  left: 10px;
+  color: #e2e6f3;
+}
+
+input[type="radio"]:hover{
+  transform: scale(1.08);
+}
+
+input[type="radio"]:checked{
+  border: 3px solid #FF914D;
+}
+
+input[type="radio"]:checked::after{
+  font-weight: 900;
+  content: "\f058";
+  color:#FF914D;
+}
+
+label{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  height: 80%;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  cursor: pointer;
+}
+
+label .fa-regular{
+  font-size: 40px;
+  color: #FF914D;
+}
+
+input[type="radio"]:checked + label .fa-regular{
+  animation: grow 0.5s;
+}
+
+@keyframes grow{
+  50%{
+    font-size: 80px;
+  }
+}
+
+label h6{
+  font-family: "Michroma", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: #FF914D;
+}
+
+@media (min-width: 576px) {
+  section{
+    flex-direction: row;
+  }
+  
+  .img img{
+  width: 20%;
+  top: 20%;
+}
+
+  
+  .tile{
+    height: 250px;
+    width: 250px;
+  }
+}
+
